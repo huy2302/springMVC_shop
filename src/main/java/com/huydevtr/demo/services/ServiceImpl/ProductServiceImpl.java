@@ -64,7 +64,6 @@ public class ProductServiceImpl implements ProductService {
         Page<Product> notifications = productRepository.findAll((org.springframework.data.domain.Pageable) topTwenty);
         return notifications;
     }
-
     @Override
     public List<Product_Category> findAllProductByCategory(String category) {
         List<Product_Category> productCategories = productCategoryRepository.findAllBySubCategorySubCategory(category);
